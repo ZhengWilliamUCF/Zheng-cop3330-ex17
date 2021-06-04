@@ -3,7 +3,6 @@
  *  Copyright 2021 William Zheng
  */
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
@@ -11,14 +10,11 @@ public class App {
 
     public static void main(String[] args) {
         App myApp = new App();
-        //double userWeight = myApp.readUserWeight();
         String userGender = myApp.readUserGender();
-        //String userConsumption = myApp.readUserConsumption();
-        //String userTime = myApp.readUserTime();
-        double Weight = myApp.readUserWeight();//Double.parseDouble(userWeight);
+        double Weight = myApp.readUserWeight();
         double ADR = myApp.GenderCheck(userGender);
-        double Consumption = myApp.readUserConsumption();//Double.parseDouble(userConsumption);
-        double Hours = myApp.readUserTime();//Double.parseDouble(userTime);
+        double Consumption = myApp.readUserConsumption();
+        double Hours = myApp.readUserTime();
         String displayMessage = myApp.BACCheck(Consumption, Weight, ADR, Hours);
         String outputString = myApp.generateOutputString(displayMessage);
         myApp.printOutput(outputString);
@@ -31,7 +27,6 @@ public class App {
     public double readUserWeight(){
         System.out.print("What is your weight in pounds? ");
         return in.nextDouble();
-
     }
 
     public String readUserGender(){
