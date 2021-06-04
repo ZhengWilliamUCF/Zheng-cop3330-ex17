@@ -26,6 +26,10 @@ public class App {
 
     public double readUserWeight(){
         System.out.print("What is your weight in pounds? ");
+        while (!in.hasNextDouble()){
+            System.out.print("Please enter a valid number.\nWhat is your weight in pounds? ");
+            in.next();
+        }
         return in.nextDouble();
     }
 
@@ -36,11 +40,19 @@ public class App {
 
     public double readUserConsumption(){
         System.out.print("How many ounces of alcohol did you consume? ");
+        while (!in.hasNextDouble()){
+            System.out.print("Please enter a valid number.\nHow many ounces of alcohol did you consume? ");
+            in.next();
+        }
         return in.nextDouble();
     }
 
     public double readUserTime(){
         System.out.print("How long has it been since your last drink? ");
+        while (!in.hasNextDouble()){
+            System.out.print("Please enter a valid number.\nHow long has it been since your last drink? ");
+            in.next();
+        }
         return in.nextDouble();
     }
 
